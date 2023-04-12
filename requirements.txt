@@ -1,0 +1,18 @@
+certifi @ file:///work/ci_py311/certifi_1676822443922/work/certifi
+contourpy==1.0.7
+coverage==7.2.3
+cycler==0.11.0
+fonttools==4.39.3
+iniconfig==2.0.0
+kiwisolver==1.4.4
+matplotlib==3.7.1
+numpy==1.24.2
+packaging==23.0
+Pillow==9.5.0
+pluggy==1.0.0
+pyparsing==3.0.9
+pytest==7.3.0
+pytest-cov==4.0.0
+python-dateutil==2.8.2
+scipy==1.10.1
+six==1.16.0
