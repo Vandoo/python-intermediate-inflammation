@@ -31,3 +31,51 @@ def daily_max(data):
 def daily_min(data):
     """Calculate the daily min of a 2d inflammation data array."""
     return np.min(data, axis=0)
+
+
+def patient_normalise(data):
+    """Normalise patient data from a 2D inflammation data array."""
+    max_data = np.max(data, axis=1)
+    return data / max_data[:, np.newaxis]
+
+
+class Observation:
+    def __init__(self, day, value):
+        self.day = day
+        self.value = value
+
+    def __str__(self):
+        return self.value
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return self.name
+
+
+class Patient(Person):
+    """A patient in an inflammation study."""
+    def __init__(self, name, observations=None):
+        super().__init__(name)
+
+        self.observations = []
+        # MODIFIED START ###
+        if observations is not None:
+            self.observations = observations
+        # MODIFIED END ###
+
+    def add_observation(self, value, day=None):
+        if day is None:
+            try:
+                day = self.observations[-1].day + 1
+
+            except IndexError:
+                day = 0
+
+        new_observation = Observation(value, day)
+
+        self.observations.append(new_observation)
+        return new_observation
