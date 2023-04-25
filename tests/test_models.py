@@ -28,7 +28,7 @@ def test_daily_max(test, expected):
     from inflammation.models import daily_max
     npt.assert_array_equal(daily_max(np.array(test)), np.array(expected))
 
- 
+
 @pytest.mark.parametrize(
     "test, expected",
     [
