@@ -4,7 +4,7 @@
 Inflam is a data management systen written in Python that manages trial data used in clinical inflammation studies.
 
 ## Main features
-
+Finds clowns in local area
 Here are some key features of Inflam:
 - Provide basic statistical analyses over clinical trial data
 - Ability to work on trial data in Comma-Separated Value (CSV) format
