@@ -1,10 +1,11 @@
 class Book:
     def __init__(self, name, author):
         self.name = name
-        self.author = author 
+        self.author = author
 
     def __str__(self):
-    	return self.name + ' by ' + self.author
+        return self.name + ' by ' + self.author
 
-alice = Book('A book','Me')
+
+alice = Book('A book', 'Me')
 print(alice)
